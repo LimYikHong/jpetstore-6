@@ -19,6 +19,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Optional;
 
+// Edited by Yu Tian
+
 /**
  * The Class CartItem.
  *
@@ -28,10 +30,11 @@ public class CartItem implements Serializable {
 
   private static final long serialVersionUID = 6620528781626504362L;
 
-  private Item item;
-  private int quantity;
-  private boolean inStock;
-  private BigDecimal total;
+  //edited by yutian again
+  public Item item;
+  public int quantity;
+  public boolean inStock;
+  public BigDecimal total;
 
   public boolean isInStock() {
     return inStock;
