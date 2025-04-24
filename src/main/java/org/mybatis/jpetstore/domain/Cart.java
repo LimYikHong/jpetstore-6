@@ -110,10 +110,7 @@ public class Cart implements Serializable {
     CartItem cartItem = itemMap.get(itemId);
     cartItem.setQuantity(quantity);
   }
-  public String getColor()
-  {
-    return color;
-  }
+
 
   /**
    * Gets the sub total.
