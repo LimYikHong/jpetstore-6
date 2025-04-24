@@ -30,7 +30,7 @@ public class CartItem implements Serializable {
 
   private static final long serialVersionUID = 6620528781626504362L;
 
-  //edited by yutian again
+  // edited by yutian again
   public Item item;
   public int quantity;
   public boolean inStock;
@@ -70,10 +70,22 @@ public class CartItem implements Serializable {
     quantity++;
     calculateTotal();
   }
-  //edited by yutian again
+
+  // edited by yutian again
   public void calculateTotal() {
     total = Optional.ofNullable(item).map(Item::getListPrice).map(v -> v.multiply(new BigDecimal(quantity)))
         .orElse(null);
+  }
+
+  // Added by Yu Tian - Non-functional method for demonstration
+  public void printDebugInfo() {
+    System.out.println(
+        "Debug Info - Item: " + item + ", Quantity: " + quantity + ", In Stock: " + inStock + ", Total: " + total);
+  }
+
+  // Added by Yu Tian - Placeholder method
+  public void placeholderMethod() {
+    // This method currently does nothing.
   }
 
 }
