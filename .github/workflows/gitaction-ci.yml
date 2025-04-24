@@ -1,35 +1,40 @@
-name: gitaction-ci
+name: CI Pipeline
 
-on: [workflow_dispatch, push, pull_request]
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
 
 jobs:
-  build:
+  build-test-deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up JDK
-      uses: actions/setup-java@v4
-      with:
-        cache: maven
-        distribution: temurin
-        java-version: 21
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
 
-    - name: Report Coverage to Coveralls for Pull Requests
-      if: github.event_name == 'pull_request'
-      run: ./mvnw -B -V test jacoco:report coveralls:report -q -Dlicense.skip=true -DrepoToken=$GITHUB_TOKEN -DserviceName=github -DpullRequest=$PR_NUMBER --no-transfer-progress
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PR_NUMBER: ${{ github.event.number }}
+      - name: Build with Maven
+        run: ./mvnw clean install -DskipTests=false
 
-    - name: Report Coverage to Coveralls for General Push
-      if: github.event_name == 'push'
-      run: ./mvnw -B -V test jacoco:report coveralls:report -q -Dlicense.skip=true -DrepoToken=$GITHUB_TOKEN -DserviceName=github --no-transfer-progress
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run Tests
+        run: ./mvnw test
 
-  test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        cache: [maven]
+      - name: Build Docker Image
+        run: docker build -t jpetstore .
+
+      - name: Deploy using Docker Compose (Optional)
+        run: docker compose up -d
+
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: target/surefire-reports/
