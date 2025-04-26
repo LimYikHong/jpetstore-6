@@ -20,11 +20,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven and save log
-        run: mvn clean package | tee target/build.log || true
-
+        run: mvn clean package | tee target/build.log
 
       - name: Run Tests
-        run: mvn test || true
+        run: mvn test
 
       - name: Upload Build Report
         if: always()
