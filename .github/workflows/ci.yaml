@@ -25,3 +25,9 @@ jobs:
           cache: ${{ matrix.cache }}
       - name: Test with Maven
         run: ./mvnw test -B -V --no-transfer-progress -D"license.skip=true"
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-report
+          path: target/surefire-reports/
