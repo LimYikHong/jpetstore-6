@@ -15,63 +15,85 @@
  */
 package org.mybatis.jpetstore.domain;
 
+// Edited by Yu Tian for pull request
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Optional;
+
+// Edited by Yu Tian
 
 /**
  * The Class CartItem.
  *
  * @author Eduardo Macarron
  */
-<span class="fc" id="L27">public class CartItem implements Serializable {</span>
+<span class="fc" id="L30">public class CartItem implements Serializable {</span>
 
   private static final long serialVersionUID = 6620528781626504362L;
 
-  private Item item;
-  private int quantity;
-  private boolean inStock;
-  private BigDecimal total;
+  // edited by yutian again
+  public Item item;
+  public int quantity;
+  public boolean inStock;
+  public BigDecimal total;
 
   public boolean isInStock() {
-<span class="fc" id="L37">    return inStock;</span>
+<span class="fc" id="L41">    return inStock;</span>
   }
 
   public void setInStock(boolean inStock) {
-<span class="fc" id="L41">    this.inStock = inStock;</span>
-<span class="fc" id="L42">  }</span>
+<span class="fc" id="L45">    this.inStock = inStock;</span>
+<span class="fc" id="L46">  }</span>
 
   public BigDecimal getTotal() {
-<span class="fc" id="L45">    return total;</span>
+<span class="fc" id="L49">    return total;</span>
   }
 
   public Item getItem() {
-<span class="fc" id="L49">    return item;</span>
+<span class="fc" id="L53">    return item;</span>
   }
 
   public void setItem(Item item) {
-<span class="fc" id="L53">    this.item = item;</span>
-<span class="fc" id="L54">    calculateTotal();</span>
-<span class="fc" id="L55">  }</span>
+<span class="fc" id="L57">    this.item = item;</span>
+<span class="fc" id="L58">    calculateTotal();</span>
+<span class="fc" id="L59">  }</span>
 
   public int getQuantity() {
-<span class="fc" id="L58">    return quantity;</span>
+<span class="fc" id="L62">    return quantity;</span>
   }
 
   public void setQuantity(int quantity) {
-<span class="fc" id="L62">    this.quantity = quantity;</span>
-<span class="fc" id="L63">    calculateTotal();</span>
-<span class="fc" id="L64">  }</span>
+<span class="fc" id="L66">    this.quantity = quantity;</span>
+<span class="fc" id="L67">    calculateTotal();</span>
+<span class="fc" id="L68">  }</span>
 
   public void incrementQuantity() {
-<span class="fc" id="L67">    quantity++;</span>
-<span class="fc" id="L68">    calculateTotal();</span>
-<span class="fc" id="L69">  }</span>
+<span class="fc" id="L71">    quantity++;</span>
+<span class="fc" id="L72">    calculateTotal();</span>
+<span class="fc" id="L73">  }</span>
 
-  private void calculateTotal() {
-<span class="fc" id="L72">    total = Optional.ofNullable(item).map(Item::getListPrice).map(v -&gt; v.multiply(new BigDecimal(quantity)))</span>
-<span class="fc" id="L73">        .orElse(null);</span>
-<span class="fc" id="L74">  }</span>
+  // edited by yutian again
+  public void calculateTotal() {
+<span class="fc" id="L77">    total = Optional.ofNullable(item).map(Item::getListPrice).map(v -&gt; v.multiply(new BigDecimal(quantity)))</span>
+<span class="fc" id="L78">        .orElse(null);</span>
+<span class="fc" id="L79">  }</span>
+
+  // Added by Yu Tian - Non-functional method for demonstration
+  public void printDebugInfo() {
+<span class="nc" id="L83">    System.out.println(</span>
+        &quot;Debug Info - Item: &quot; + item + &quot;, Quantity: &quot; + quantity + &quot;, In Stock: &quot; + inStock + &quot;, Total: &quot; + total);
+<span class="nc" id="L85">  }</span>
+
+  // Added by Yu Tian - Placeholder method
+  public void placeholderMethod() {
+    // This method currently does nothing.
+<span class="nc" id="L90">  }</span>
+
+  // This method is added by Yu Tian
+
+  public void showContributorName() {
+<span class="nc" id="L95">    System.out.println(&quot;This file was contributed by Yu Tian.&quot;);</span>
+<span class="nc" id="L96">  }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

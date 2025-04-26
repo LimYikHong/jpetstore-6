@@ -7,7 +7,7 @@ JPetStore Demo 6,org.mybatis.jpetstore.domain,Category,6,25,0,0,2,10,2,7,2,7
 JPetStore Demo 6,org.mybatis.jpetstore.domain,LineItem,0,100,0,0,0,34,0,17,0,17
 JPetStore Demo 6,org.mybatis.jpetstore.domain,Order,0,327,0,2,0,119,0,59,0,58
 JPetStore Demo 6,org.mybatis.jpetstore.domain,Item,23,72,0,0,9,29,5,21,5,21
-JPetStore Demo 6,org.mybatis.jpetstore.domain,CartItem,0,62,0,0,0,19,0,11,0,11
+JPetStore Demo 6,org.mybatis.jpetstore.domain,CartItem,19,62,0,0,5,19,3,11,3,11
 JPetStore Demo 6,org.mybatis.jpetstore.service,CatalogService,0,83,0,4,0,16,0,11,0,9
 JPetStore Demo 6,org.mybatis.jpetstore.service,OrderService,0,149,0,2,0,37,0,9,0,8
 JPetStore Demo 6,org.mybatis.jpetstore.service,AccountService,1,59,1,1,0,14,1,7,0,7
