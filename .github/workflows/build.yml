@@ -20,7 +20,8 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven and save log
-        run: mvn clean package | tee target/build.log
+        run: mvn clean package | tee target/build.log || true
+
 
       - name: Run Tests
         run: mvn test
