@@ -25,6 +25,7 @@ jobs:
           cache: ${{ matrix.cache }}
 
       - name: Test with Maven
+
         shell: bash
         run: |
           if [ "$RUNNER_OS" == "Windows" ]; then
@@ -32,6 +33,7 @@ jobs:
           else
           ./mvnw test -B -V --no-transfer-progress -D"license.skip=true"
           fi
+
 
       - name: Upload test reports
         if: always()
