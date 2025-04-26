@@ -1,5 +1,5 @@
 /*
- *    Copyright 2010-2022 the original author or authors.
+ *    Copyright 2010-2025 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
+//nihao
 package org.mybatis.jpetstore.domain;
 
 import java.io.Serializable;
@@ -25,14 +26,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The Class Cart.
+ * The Class Cart.hit
  *
  * @author Eduardo Macarron
  */
 public class Cart implements Serializable {
 
   private static final long serialVersionUID = 8329559983943337176L;
-
   private final Map<String, CartItem> itemMap = Collections.synchronizedMap(new HashMap<>());
   private final List<CartItem> itemList = new ArrayList<>();
 
@@ -120,10 +120,6 @@ public class Cart implements Serializable {
     return itemList.stream()
         .map(cartItem -> cartItem.getItem().getListPrice().multiply(new BigDecimal(cartItem.getQuantity())))
         .reduce(BigDecimal.ZERO, BigDecimal::add);
-  }
-
-  public String getCartColor() {
-    return cartColor;
   }
 
 }
