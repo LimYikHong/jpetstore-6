@@ -25,7 +25,7 @@ jobs:
           cache: ${{ matrix.cache }}
 
       - name: Test with Maven
-        run: ./mvnw test -B -V --no-transfer-progress -D"license.skip=true"
+        run: ./mvnw test -B -V --no-transfer-progress -D"license.skip=true"  | tee target/build.log || true
 
       - name: Upload test reports
         if: always()
