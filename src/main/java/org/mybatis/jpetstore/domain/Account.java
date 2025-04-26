@@ -38,7 +38,7 @@ public class Account implements Serializable {
   private String address2;
   private String city;
   private String state;
-  private String zipcode;
+  private String zip;
   private String country;
   private String phone;
   private String favouriteCategoryId;
@@ -129,12 +129,12 @@ public class Account implements Serializable {
     this.state = state;
   }
 
-  public String getZipcode() {
-    return zipcode;
+  public String getZip() {
+    return zip;
   }
 
-  public void setZipcode(String zipcode) {
-    this.zipcode = zipcode;
+  public void setZip(String zip) {
+    this.zip = zip;
   }
 
   public String getCountry() {
