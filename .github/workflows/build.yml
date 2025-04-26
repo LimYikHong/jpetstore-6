@@ -26,7 +26,8 @@ jobs:
         run: mvn test
 
       - name: Upload Build Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-log
-          path: build/build.log
+  if: always()
+  uses: actions/upload-artifact@v4
+  with:
+    name: build-log-${{ matrix.os }}-jdk${{ matrix.java }}
+    path: build/build.log
