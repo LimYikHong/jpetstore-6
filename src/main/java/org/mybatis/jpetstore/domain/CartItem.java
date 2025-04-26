@@ -15,6 +15,7 @@
  */
 package org.mybatis.jpetstore.domain;
 
+// Edited by Yu Tian for pull request
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Optional;
@@ -87,5 +88,11 @@ public class CartItem implements Serializable {
   public void placeholderMethod() {
     // This method currently does nothing.
   }
+
+  // This method is added by Yu Tian
+
+  public void showContributorName() {
+    System.out.println("This file was contributed by Yu Tian.");
+}
 
 }
