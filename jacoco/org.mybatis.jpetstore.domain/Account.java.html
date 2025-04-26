@@ -47,154 +47,155 @@ import net.sourceforge.stripes.validation.Validate;
   private boolean bannerOption;
   private String bannerName;
 
+  // added a comment
   public String getUsername() {
-<span class="fc" id="L51">    return username;</span>
+<span class="fc" id="L52">    return username;</span>
   }
 
   public void setUsername(String username) {
-<span class="fc" id="L55">    this.username = username;</span>
-<span class="fc" id="L56">  }</span>
+<span class="fc" id="L56">    this.username = username;</span>
+<span class="fc" id="L57">  }</span>
 
   public String getPassword() {
-<span class="fc" id="L59">    return password;</span>
+<span class="fc" id="L60">    return password;</span>
   }
 
   public void setPassword(String password) {
-<span class="fc" id="L63">    this.password = password;</span>
-<span class="fc" id="L64">  }</span>
+<span class="fc" id="L64">    this.password = password;</span>
+<span class="fc" id="L65">  }</span>
 
   public String getEmail() {
-<span class="fc" id="L67">    return email;</span>
+<span class="fc" id="L68">    return email;</span>
   }
 
   public void setEmail(String email) {
-<span class="fc" id="L71">    this.email = email;</span>
-<span class="fc" id="L72">  }</span>
+<span class="fc" id="L72">    this.email = email;</span>
+<span class="fc" id="L73">  }</span>
 
   public String getFirstName() {
-<span class="fc" id="L75">    return firstName;</span>
+<span class="fc" id="L76">    return firstName;</span>
   }
 
   @Validate(required = true, on = { &quot;newAccount&quot;, &quot;editAccount&quot; })
   public void setFirstName(String firstName) {
-<span class="fc" id="L80">    this.firstName = firstName;</span>
-<span class="fc" id="L81">  }</span>
+<span class="fc" id="L81">    this.firstName = firstName;</span>
+<span class="fc" id="L82">  }</span>
 
   public String getLastName() {
-<span class="fc" id="L84">    return lastName;</span>
+<span class="fc" id="L85">    return lastName;</span>
   }
 
   @Validate(required = true, on = { &quot;newAccount&quot;, &quot;editAccount&quot; })
   public void setLastName(String lastName) {
-<span class="fc" id="L89">    this.lastName = lastName;</span>
-<span class="fc" id="L90">  }</span>
+<span class="fc" id="L90">    this.lastName = lastName;</span>
+<span class="fc" id="L91">  }</span>
 
   public String getStatus() {
-<span class="fc" id="L93">    return status;</span>
+<span class="fc" id="L94">    return status;</span>
   }
 
   public void setStatus(String status) {
-<span class="fc" id="L97">    this.status = status;</span>
-<span class="fc" id="L98">  }</span>
+<span class="fc" id="L98">    this.status = status;</span>
+<span class="fc" id="L99">  }</span>
 
   public String getAddress1() {
-<span class="fc" id="L101">    return address1;</span>
+<span class="fc" id="L102">    return address1;</span>
   }
 
   public void setAddress1(String address1) {
-<span class="fc" id="L105">    this.address1 = address1;</span>
-<span class="fc" id="L106">  }</span>
+<span class="fc" id="L106">    this.address1 = address1;</span>
+<span class="fc" id="L107">  }</span>
 
   public String getAddress2() {
-<span class="fc" id="L109">    return address2;</span>
+<span class="fc" id="L110">    return address2;</span>
   }
 
   public void setAddress2(String address2) {
-<span class="fc" id="L113">    this.address2 = address2;</span>
-<span class="fc" id="L114">  }</span>
+<span class="fc" id="L114">    this.address2 = address2;</span>
+<span class="fc" id="L115">  }</span>
 
   public String getCity() {
-<span class="fc" id="L117">    return city;</span>
+<span class="fc" id="L118">    return city;</span>
   }
 
   public void setCity(String city) {
-<span class="fc" id="L121">    this.city = city;</span>
-<span class="fc" id="L122">  }</span>
+<span class="fc" id="L122">    this.city = city;</span>
+<span class="fc" id="L123">  }</span>
 
   public String getState() {
-<span class="fc" id="L125">    return state;</span>
+<span class="fc" id="L126">    return state;</span>
   }
 
   public void setState(String state) {
-<span class="fc" id="L129">    this.state = state;</span>
-<span class="fc" id="L130">  }</span>
+<span class="fc" id="L130">    this.state = state;</span>
+<span class="fc" id="L131">  }</span>
 
   public String getZip() {
-<span class="fc" id="L133">    return zip;</span>
+<span class="fc" id="L134">    return zip;</span>
   }
 
   public void setZip(String zip) {
-<span class="fc" id="L137">    this.zip = zip;</span>
-<span class="fc" id="L138">  }</span>
+<span class="fc" id="L138">    this.zip = zip;</span>
+<span class="fc" id="L139">  }</span>
 
   public String getCountry() {
-<span class="fc" id="L141">    return country;</span>
+<span class="fc" id="L142">    return country;</span>
   }
 
   public void setCountry(String country) {
-<span class="fc" id="L145">    this.country = country;</span>
-<span class="fc" id="L146">  }</span>
+<span class="fc" id="L146">    this.country = country;</span>
+<span class="fc" id="L147">  }</span>
 
   public String getPhone() {
-<span class="fc" id="L149">    return phone;</span>
+<span class="fc" id="L150">    return phone;</span>
   }
 
   public void setPhone(String phone) {
-<span class="fc" id="L153">    this.phone = phone;</span>
-<span class="fc" id="L154">  }</span>
+<span class="fc" id="L154">    this.phone = phone;</span>
+<span class="fc" id="L155">  }</span>
 
   public String getFavouriteCategoryId() {
-<span class="fc" id="L157">    return favouriteCategoryId;</span>
+<span class="fc" id="L158">    return favouriteCategoryId;</span>
   }
 
   public void setFavouriteCategoryId(String favouriteCategoryId) {
-<span class="fc" id="L161">    this.favouriteCategoryId = favouriteCategoryId;</span>
-<span class="fc" id="L162">  }</span>
+<span class="fc" id="L162">    this.favouriteCategoryId = favouriteCategoryId;</span>
+<span class="fc" id="L163">  }</span>
 
   public String getLanguagePreference() {
-<span class="fc" id="L165">    return languagePreference;</span>
+<span class="fc" id="L166">    return languagePreference;</span>
   }
 
   public void setLanguagePreference(String languagePreference) {
-<span class="fc" id="L169">    this.languagePreference = languagePreference;</span>
-<span class="fc" id="L170">  }</span>
+<span class="fc" id="L170">    this.languagePreference = languagePreference;</span>
+<span class="fc" id="L171">  }</span>
 
   public boolean isListOption() {
-<span class="fc" id="L173">    return listOption;</span>
+<span class="fc" id="L174">    return listOption;</span>
   }
 
   public void setListOption(boolean listOption) {
-<span class="fc" id="L177">    this.listOption = listOption;</span>
-<span class="fc" id="L178">  }</span>
+<span class="fc" id="L178">    this.listOption = listOption;</span>
+<span class="fc" id="L179">  }</span>
 
   public boolean isBannerOption() {
-<span class="fc" id="L181">    return bannerOption;</span>
+<span class="fc" id="L182">    return bannerOption;</span>
   }
 
   public void setBannerOption(boolean bannerOption) {
-<span class="fc" id="L185">    this.bannerOption = bannerOption;</span>
-<span class="fc" id="L186">  }</span>
+<span class="fc" id="L186">    this.bannerOption = bannerOption;</span>
+<span class="fc" id="L187">  }</span>
 
   public String getBannerName() {
-<span class="fc" id="L189">    return bannerName;</span>
+<span class="fc" id="L190">    return bannerName;</span>
   }
 
   public void setBannerName(String bannerName) {
-<span class="fc" id="L193">    this.bannerName = bannerName;</span>
-<span class="fc" id="L194">  }</span>
+<span class="fc" id="L194">    this.bannerName = bannerName;</span>
+<span class="fc" id="L195">  }</span>
 
   public String getFullName() {
-<span class="nc bnc" id="L197" title="All 4 branches missed.">    return (firstName != null ? firstName : &quot;&quot;) + &quot; &quot; + (lastName != null ? lastName : &quot;&quot;);</span>
+<span class="nc bnc" id="L198" title="All 4 branches missed.">    return (firstName != null ? firstName : &quot;&quot;) + &quot; &quot; + (lastName != null ? lastName : &quot;&quot;);</span>
   }
 
 }

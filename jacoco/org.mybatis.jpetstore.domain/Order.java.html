@@ -22,12 +22,13 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+//this is a comment
 /**
  * The Class Order.
  *
  * @author Eduardo Macarron
  */
-<span class="fc" id="L30">public class Order implements Serializable {</span>
+<span class="fc" id="L31">public class Order implements Serializable {</span>
 
   private static final long serialVersionUID = 6321792448424424931L;
 
@@ -57,222 +58,222 @@ import java.util.List;
   private String cardType;
   private String locale;
   private String status;
-<span class="fc" id="L60">  private List&lt;LineItem&gt; lineItems = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L61">  private List&lt;LineItem&gt; lineItems = new ArrayList&lt;&gt;();</span>
 
   public int getOrderId() {
-<span class="fc" id="L63">    return orderId;</span>
+<span class="fc" id="L64">    return orderId;</span>
   }
 
   public void setOrderId(int orderId) {
-<span class="fc" id="L67">    this.orderId = orderId;</span>
-<span class="fc" id="L68">  }</span>
+<span class="fc" id="L68">    this.orderId = orderId;</span>
+<span class="fc" id="L69">  }</span>
 
   public String getUsername() {
-<span class="fc" id="L71">    return username;</span>
+<span class="fc" id="L72">    return username;</span>
   }
 
   public void setUsername(String username) {
-<span class="fc" id="L75">    this.username = username;</span>
-<span class="fc" id="L76">  }</span>
+<span class="fc" id="L76">    this.username = username;</span>
+<span class="fc" id="L77">  }</span>
 
   public Date getOrderDate() {
-<span class="fc" id="L79">    return orderDate;</span>
+<span class="fc" id="L80">    return orderDate;</span>
   }
 
   public void setOrderDate(Date orderDate) {
-<span class="fc" id="L83">    this.orderDate = orderDate;</span>
-<span class="fc" id="L84">  }</span>
+<span class="fc" id="L84">    this.orderDate = orderDate;</span>
+<span class="fc" id="L85">  }</span>
 
   public String getShipAddress1() {
-<span class="fc" id="L87">    return shipAddress1;</span>
+<span class="fc" id="L88">    return shipAddress1;</span>
   }
 
   public void setShipAddress1(String shipAddress1) {
-<span class="fc" id="L91">    this.shipAddress1 = shipAddress1;</span>
-<span class="fc" id="L92">  }</span>
+<span class="fc" id="L92">    this.shipAddress1 = shipAddress1;</span>
+<span class="fc" id="L93">  }</span>
 
   public String getShipAddress2() {
-<span class="fc" id="L95">    return shipAddress2;</span>
+<span class="fc" id="L96">    return shipAddress2;</span>
   }
 
   public void setShipAddress2(String shipAddress2) {
-<span class="fc" id="L99">    this.shipAddress2 = shipAddress2;</span>
-<span class="fc" id="L100">  }</span>
+<span class="fc" id="L100">    this.shipAddress2 = shipAddress2;</span>
+<span class="fc" id="L101">  }</span>
 
   public String getShipCity() {
-<span class="fc" id="L103">    return shipCity;</span>
+<span class="fc" id="L104">    return shipCity;</span>
   }
 
   public void setShipCity(String shipCity) {
-<span class="fc" id="L107">    this.shipCity = shipCity;</span>
-<span class="fc" id="L108">  }</span>
+<span class="fc" id="L108">    this.shipCity = shipCity;</span>
+<span class="fc" id="L109">  }</span>
 
   public String getShipState() {
-<span class="fc" id="L111">    return shipState;</span>
+<span class="fc" id="L112">    return shipState;</span>
   }
 
   public void setShipState(String shipState) {
-<span class="fc" id="L115">    this.shipState = shipState;</span>
-<span class="fc" id="L116">  }</span>
+<span class="fc" id="L116">    this.shipState = shipState;</span>
+<span class="fc" id="L117">  }</span>
 
   public String getShipZip() {
-<span class="fc" id="L119">    return shipZip;</span>
+<span class="fc" id="L120">    return shipZip;</span>
   }
 
   public void setShipZip(String shipZip) {
-<span class="fc" id="L123">    this.shipZip = shipZip;</span>
-<span class="fc" id="L124">  }</span>
+<span class="fc" id="L124">    this.shipZip = shipZip;</span>
+<span class="fc" id="L125">  }</span>
 
   public String getShipCountry() {
-<span class="fc" id="L127">    return shipCountry;</span>
+<span class="fc" id="L128">    return shipCountry;</span>
   }
 
   public void setShipCountry(String shipCountry) {
-<span class="fc" id="L131">    this.shipCountry = shipCountry;</span>
-<span class="fc" id="L132">  }</span>
+<span class="fc" id="L132">    this.shipCountry = shipCountry;</span>
+<span class="fc" id="L133">  }</span>
 
   public String getBillAddress1() {
-<span class="fc" id="L135">    return billAddress1;</span>
+<span class="fc" id="L136">    return billAddress1;</span>
   }
 
   public void setBillAddress1(String billAddress1) {
-<span class="fc" id="L139">    this.billAddress1 = billAddress1;</span>
-<span class="fc" id="L140">  }</span>
+<span class="fc" id="L140">    this.billAddress1 = billAddress1;</span>
+<span class="fc" id="L141">  }</span>
 
   public String getBillAddress2() {
-<span class="fc" id="L143">    return billAddress2;</span>
+<span class="fc" id="L144">    return billAddress2;</span>
   }
 
   public void setBillAddress2(String billAddress2) {
-<span class="fc" id="L147">    this.billAddress2 = billAddress2;</span>
-<span class="fc" id="L148">  }</span>
+<span class="fc" id="L148">    this.billAddress2 = billAddress2;</span>
+<span class="fc" id="L149">  }</span>
 
   public String getBillCity() {
-<span class="fc" id="L151">    return billCity;</span>
+<span class="fc" id="L152">    return billCity;</span>
   }
 
   public void setBillCity(String billCity) {
-<span class="fc" id="L155">    this.billCity = billCity;</span>
-<span class="fc" id="L156">  }</span>
+<span class="fc" id="L156">    this.billCity = billCity;</span>
+<span class="fc" id="L157">  }</span>
 
   public String getBillState() {
-<span class="fc" id="L159">    return billState;</span>
+<span class="fc" id="L160">    return billState;</span>
   }
 
   public void setBillState(String billState) {
-<span class="fc" id="L163">    this.billState = billState;</span>
-<span class="fc" id="L164">  }</span>
+<span class="fc" id="L164">    this.billState = billState;</span>
+<span class="fc" id="L165">  }</span>
 
   public String getBillZip() {
-<span class="fc" id="L167">    return billZip;</span>
+<span class="fc" id="L168">    return billZip;</span>
   }
 
   public void setBillZip(String billZip) {
-<span class="fc" id="L171">    this.billZip = billZip;</span>
-<span class="fc" id="L172">  }</span>
+<span class="fc" id="L172">    this.billZip = billZip;</span>
+<span class="fc" id="L173">  }</span>
 
   public String getBillCountry() {
-<span class="fc" id="L175">    return billCountry;</span>
+<span class="fc" id="L176">    return billCountry;</span>
   }
 
   public void setBillCountry(String billCountry) {
-<span class="fc" id="L179">    this.billCountry = billCountry;</span>
-<span class="fc" id="L180">  }</span>
+<span class="fc" id="L180">    this.billCountry = billCountry;</span>
+<span class="fc" id="L181">  }</span>
 
   public String getCourier() {
-<span class="fc" id="L183">    return courier;</span>
+<span class="fc" id="L184">    return courier;</span>
   }
 
   public void setCourier(String courier) {
-<span class="fc" id="L187">    this.courier = courier;</span>
-<span class="fc" id="L188">  }</span>
+<span class="fc" id="L188">    this.courier = courier;</span>
+<span class="fc" id="L189">  }</span>
 
   public BigDecimal getTotalPrice() {
-<span class="fc" id="L191">    return totalPrice;</span>
+<span class="fc" id="L192">    return totalPrice;</span>
   }
 
   public void setTotalPrice(BigDecimal totalPrice) {
-<span class="fc" id="L195">    this.totalPrice = totalPrice;</span>
-<span class="fc" id="L196">  }</span>
+<span class="fc" id="L196">    this.totalPrice = totalPrice;</span>
+<span class="fc" id="L197">  }</span>
 
   public String getBillToFirstName() {
-<span class="fc" id="L199">    return billToFirstName;</span>
+<span class="fc" id="L200">    return billToFirstName;</span>
   }
 
   public void setBillToFirstName(String billToFirstName) {
-<span class="fc" id="L203">    this.billToFirstName = billToFirstName;</span>
-<span class="fc" id="L204">  }</span>
+<span class="fc" id="L204">    this.billToFirstName = billToFirstName;</span>
+<span class="fc" id="L205">  }</span>
 
   public String getBillToLastName() {
-<span class="fc" id="L207">    return billToLastName;</span>
+<span class="fc" id="L208">    return billToLastName;</span>
   }
 
   public void setBillToLastName(String billToLastName) {
-<span class="fc" id="L211">    this.billToLastName = billToLastName;</span>
-<span class="fc" id="L212">  }</span>
+<span class="fc" id="L212">    this.billToLastName = billToLastName;</span>
+<span class="fc" id="L213">  }</span>
 
   public String getShipToFirstName() {
-<span class="fc" id="L215">    return shipToFirstName;</span>
+<span class="fc" id="L216">    return shipToFirstName;</span>
   }
 
   public void setShipToFirstName(String shipFoFirstName) {
-<span class="fc" id="L219">    this.shipToFirstName = shipFoFirstName;</span>
-<span class="fc" id="L220">  }</span>
+<span class="fc" id="L220">    this.shipToFirstName = shipFoFirstName;</span>
+<span class="fc" id="L221">  }</span>
 
   public String getShipToLastName() {
-<span class="fc" id="L223">    return shipToLastName;</span>
+<span class="fc" id="L224">    return shipToLastName;</span>
   }
 
   public void setShipToLastName(String shipToLastName) {
-<span class="fc" id="L227">    this.shipToLastName = shipToLastName;</span>
-<span class="fc" id="L228">  }</span>
+<span class="fc" id="L228">    this.shipToLastName = shipToLastName;</span>
+<span class="fc" id="L229">  }</span>
 
   public String getCreditCard() {
-<span class="fc" id="L231">    return creditCard;</span>
+<span class="fc" id="L232">    return creditCard;</span>
   }
 
   public void setCreditCard(String creditCard) {
-<span class="fc" id="L235">    this.creditCard = creditCard;</span>
-<span class="fc" id="L236">  }</span>
+<span class="fc" id="L236">    this.creditCard = creditCard;</span>
+<span class="fc" id="L237">  }</span>
 
   public String getExpiryDate() {
-<span class="fc" id="L239">    return expiryDate;</span>
+<span class="fc" id="L240">    return expiryDate;</span>
   }
 
   public void setExpiryDate(String expiryDate) {
-<span class="fc" id="L243">    this.expiryDate = expiryDate;</span>
-<span class="fc" id="L244">  }</span>
+<span class="fc" id="L244">    this.expiryDate = expiryDate;</span>
+<span class="fc" id="L245">  }</span>
 
   public String getCardType() {
-<span class="fc" id="L247">    return cardType;</span>
+<span class="fc" id="L248">    return cardType;</span>
   }
 
   public void setCardType(String cardType) {
-<span class="fc" id="L251">    this.cardType = cardType;</span>
-<span class="fc" id="L252">  }</span>
+<span class="fc" id="L252">    this.cardType = cardType;</span>
+<span class="fc" id="L253">  }</span>
 
   public String getLocale() {
-<span class="fc" id="L255">    return locale;</span>
+<span class="fc" id="L256">    return locale;</span>
   }
 
   public void setLocale(String locale) {
-<span class="fc" id="L259">    this.locale = locale;</span>
-<span class="fc" id="L260">  }</span>
+<span class="fc" id="L260">    this.locale = locale;</span>
+<span class="fc" id="L261">  }</span>
 
   public String getStatus() {
-<span class="fc" id="L263">    return status;</span>
+<span class="fc" id="L264">    return status;</span>
   }
 
   public void setStatus(String status) {
-<span class="fc" id="L267">    this.status = status;</span>
-<span class="fc" id="L268">  }</span>
+<span class="fc" id="L268">    this.status = status;</span>
+<span class="fc" id="L269">  }</span>
 
   public void setLineItems(List&lt;LineItem&gt; lineItems) {
-<span class="fc" id="L271">    this.lineItems = lineItems;</span>
-<span class="fc" id="L272">  }</span>
+<span class="fc" id="L272">    this.lineItems = lineItems;</span>
+<span class="fc" id="L273">  }</span>
 
   public List&lt;LineItem&gt; getLineItems() {
-<span class="fc" id="L275">    return lineItems;</span>
+<span class="fc" id="L276">    return lineItems;</span>
   }
 
   /**
@@ -285,52 +286,52 @@ import java.util.List;
    */
   public void initOrder(Account account, Cart cart) {
 
-<span class="fc" id="L288">    username = account.getUsername();</span>
-<span class="fc" id="L289">    orderDate = new Date();</span>
+<span class="fc" id="L289">    username = account.getUsername();</span>
+<span class="fc" id="L290">    orderDate = new Date();</span>
 
-<span class="fc" id="L291">    shipToFirstName = account.getFirstName();</span>
-<span class="fc" id="L292">    shipToLastName = account.getLastName();</span>
-<span class="fc" id="L293">    shipAddress1 = account.getAddress1();</span>
-<span class="fc" id="L294">    shipAddress2 = account.getAddress2();</span>
-<span class="fc" id="L295">    shipCity = account.getCity();</span>
-<span class="fc" id="L296">    shipState = account.getState();</span>
-<span class="fc" id="L297">    shipZip = account.getZip();</span>
-<span class="fc" id="L298">    shipCountry = account.getCountry();</span>
+<span class="fc" id="L292">    shipToFirstName = account.getFirstName();</span>
+<span class="fc" id="L293">    shipToLastName = account.getLastName();</span>
+<span class="fc" id="L294">    shipAddress1 = account.getAddress1();</span>
+<span class="fc" id="L295">    shipAddress2 = account.getAddress2();</span>
+<span class="fc" id="L296">    shipCity = account.getCity();</span>
+<span class="fc" id="L297">    shipState = account.getState();</span>
+<span class="fc" id="L298">    shipZip = account.getZip();</span>
+<span class="fc" id="L299">    shipCountry = account.getCountry();</span>
 
-<span class="fc" id="L300">    billToFirstName = account.getFirstName();</span>
-<span class="fc" id="L301">    billToLastName = account.getLastName();</span>
-<span class="fc" id="L302">    billAddress1 = account.getAddress1();</span>
-<span class="fc" id="L303">    billAddress2 = account.getAddress2();</span>
-<span class="fc" id="L304">    billCity = account.getCity();</span>
-<span class="fc" id="L305">    billState = account.getState();</span>
-<span class="fc" id="L306">    billZip = account.getZip();</span>
-<span class="fc" id="L307">    billCountry = account.getCountry();</span>
+<span class="fc" id="L301">    billToFirstName = account.getFirstName();</span>
+<span class="fc" id="L302">    billToLastName = account.getLastName();</span>
+<span class="fc" id="L303">    billAddress1 = account.getAddress1();</span>
+<span class="fc" id="L304">    billAddress2 = account.getAddress2();</span>
+<span class="fc" id="L305">    billCity = account.getCity();</span>
+<span class="fc" id="L306">    billState = account.getState();</span>
+<span class="fc" id="L307">    billZip = account.getZip();</span>
+<span class="fc" id="L308">    billCountry = account.getCountry();</span>
 
-<span class="fc" id="L309">    totalPrice = cart.getSubTotal();</span>
+<span class="fc" id="L310">    totalPrice = cart.getSubTotal();</span>
 
-<span class="fc" id="L311">    creditCard = &quot;999 9999 9999 9999&quot;;</span>
-<span class="fc" id="L312">    expiryDate = &quot;12/03&quot;;</span>
-<span class="fc" id="L313">    cardType = &quot;Visa&quot;;</span>
-<span class="fc" id="L314">    courier = &quot;UPS&quot;;</span>
-<span class="fc" id="L315">    locale = &quot;CA&quot;;</span>
-<span class="fc" id="L316">    status = &quot;P&quot;;</span>
+<span class="fc" id="L312">    creditCard = &quot;999 9999 9999 9999&quot;;</span>
+<span class="fc" id="L313">    expiryDate = &quot;12/03&quot;;</span>
+<span class="fc" id="L314">    cardType = &quot;Visa&quot;;</span>
+<span class="fc" id="L315">    courier = &quot;UPS&quot;;</span>
+<span class="fc" id="L316">    locale = &quot;CA&quot;;</span>
+<span class="fc" id="L317">    status = &quot;P&quot;;</span>
 
-<span class="fc" id="L318">    Iterator&lt;CartItem&gt; i = cart.getAllCartItems();</span>
-<span class="fc bfc" id="L319" title="All 2 branches covered.">    while (i.hasNext()) {</span>
-<span class="fc" id="L320">      CartItem cartItem = i.next();</span>
-<span class="fc" id="L321">      addLineItem(cartItem);</span>
-<span class="fc" id="L322">    }</span>
+<span class="fc" id="L319">    Iterator&lt;CartItem&gt; i = cart.getAllCartItems();</span>
+<span class="fc bfc" id="L320" title="All 2 branches covered.">    while (i.hasNext()) {</span>
+<span class="fc" id="L321">      CartItem cartItem = i.next();</span>
+<span class="fc" id="L322">      addLineItem(cartItem);</span>
+<span class="fc" id="L323">    }</span>
 
-<span class="fc" id="L324">  }</span>
+<span class="fc" id="L325">  }</span>
 
   public void addLineItem(CartItem cartItem) {
-<span class="fc" id="L327">    LineItem lineItem = new LineItem(lineItems.size() + 1, cartItem);</span>
-<span class="fc" id="L328">    addLineItem(lineItem);</span>
-<span class="fc" id="L329">  }</span>
+<span class="fc" id="L328">    LineItem lineItem = new LineItem(lineItems.size() + 1, cartItem);</span>
+<span class="fc" id="L329">    addLineItem(lineItem);</span>
+<span class="fc" id="L330">  }</span>
 
   public void addLineItem(LineItem lineItem) {
-<span class="fc" id="L332">    lineItems.add(lineItem);</span>
-<span class="fc" id="L333">  }</span>
+<span class="fc" id="L333">    lineItems.add(lineItem);</span>
+<span class="fc" id="L334">  }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

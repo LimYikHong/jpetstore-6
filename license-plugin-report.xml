@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<licensePluginReport goal="FORMAT" timestamp="1745676804829">
+<licensePluginReport goal="FORMAT" timestamp="1745679058028">
     <module artifactId="jpetstore" groupId="org.mybatis" version="6.1.1-SNAPSHOT"/>
     <files>
         <file path=".mvn/extensions.xml" result="NOOP"/>
         <file path=".mvn/settings.xml" result="NOOP"/>
+        <file path=".vs/jpetstore-6/CopilotIndices/17.13.441.19478/CodeChunks.db" result="UNKNOWN"/>
+        <file path=".vs/jpetstore-6/CopilotIndices/17.13.441.19478/SemanticSymbols.db" result="UNKNOWN"/>
+        <file path=".vs/jpetstore-6/FileContentIndex/462d2433-7140-40c4-91b6-ad28c405a3ba.vsidx" result="UNKNOWN"/>
+        <file path=".vs/jpetstore-6/v17/.wsuo" result="UNKNOWN"/>
+        <file path=".vs/slnx.sqlite" result="UNKNOWN"/>
         <file path="Dockerfile" result="NOOP"/>
         <file path="css/css/maven-base.css" result="NOOP"/>
         <file path="css/css/maven-theme.css" result="NOOP"/>

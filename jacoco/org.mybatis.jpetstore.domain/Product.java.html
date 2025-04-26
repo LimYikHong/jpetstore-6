@@ -69,5 +69,8 @@ import java.io.Serializable;
   }
   // --- Non-functional method added for demonstration ---
 
+  public boolean isEmpty() {
+<span class="nc bnc" id="L73" title="All 8 branches missed.">    return (productId == null || productId.isEmpty()) &amp;&amp; (name == null || name.isEmpty());</span>
+  }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
