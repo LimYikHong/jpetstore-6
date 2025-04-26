@@ -129,12 +129,12 @@ public class Account implements Serializable {
     this.state = state;
   }
 
-  public String getZip() {
-    return zip;
+  public String getZipcode() {
+    return zipcode;
   }
 
-  public void setZip(String zip) {
-    this.zip = zip;
+  public void setZipcode(String zipcode) {
+    this.zipcode = zipcode;
   }
 
   public String getCountry() {
