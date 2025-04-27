@@ -2,7 +2,7 @@ GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_
 JPetStore Demo 6,org.mybatis.jpetstore.domain,Cart,0,128,0,4,0,32,0,14,0,12
 JPetStore Demo 6,org.mybatis.jpetstore.domain,Account,16,129,4,0,1,55,3,37,1,37
 JPetStore Demo 6,org.mybatis.jpetstore.domain,Sequence,0,26,0,0,0,12,0,6,0,6
-JPetStore Demo 6,org.mybatis.jpetstore.domain,Product,18,35,8,0,1,14,5,10,1,10
+JPetStore Demo 6,org.mybatis.jpetstore.domain,Product,0,35,0,0,0,14,0,10,0,10
 JPetStore Demo 6,org.mybatis.jpetstore.domain,Category,6,25,0,0,2,10,2,7,2,7
 JPetStore Demo 6,org.mybatis.jpetstore.domain,LineItem,0,100,0,0,0,34,0,17,0,17
 JPetStore Demo 6,org.mybatis.jpetstore.domain,Order,0,327,0,2,0,119,0,59,0,58
