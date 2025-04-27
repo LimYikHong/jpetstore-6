@@ -1,27 +1,43 @@
-name: Java CI
+name: Java CI with Maven, Surefire, and JaCoCo
 
 on: [workflow_dispatch, push, pull_request]
 
 jobs:
-  test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        cache: [maven]
-        distribution: [temurin]
-        java: [17,  21, 23]
-        os: [ubuntu-latest, macos-latest, windows-latest]
-      fail-fast: false
-      max-parallel: 4
-    name: Test JDK ${{ matrix.java }}, ${{ matrix.os }}
+  build-test-deploy:
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up JDK ${{ matrix.java }} ${{ matrix.distribution }}
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: ${{ matrix.java }}
-          distribution: ${{ matrix.distribution }}
-          cache: ${{ matrix.cache }}
-      - name: Test with Maven
-        run: ./mvnw test -B -V --no-transfer-progress -D"license.skip=true"
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Build and Run Tests
+        run: ./mvnw clean verify -B -V --no-transfer-progress -D"license.skip=true"
+
+
+      - name: Upload Build Artifact (WAR file)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: target/*.war
+
+      - name: Upload Test Execution Reports (Surefire)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-test-reports-ci
+          path: target/surefire-reports/
+
+      - name: Upload Code Coverage Report (JaCoCo)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-code-coverage
+          path: target/site/jacoco/

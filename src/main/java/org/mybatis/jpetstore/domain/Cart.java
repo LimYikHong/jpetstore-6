@@ -1,5 +1,5 @@
 /*
- *    Copyright 2010-2022 the original author or authors.
+ *    Copyright 2010-2025 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The Class Cart.
+ * The Class Cart.hit
  *
  * @author Eduardo Macarron
  */
@@ -110,7 +110,10 @@ public class Cart implements Serializable {
     CartItem cartItem = itemMap.get(itemId);
     cartItem.setQuantity(quantity);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 11e41d143a4f86e1856011d4bea791c392bb358e
 
   /**
    * Gets the sub total.
@@ -123,7 +126,4 @@ public class Cart implements Serializable {
         .reduce(BigDecimal.ZERO, BigDecimal::add);
   }
 
-
-=======
->>>>>>> LYHBranch
 }

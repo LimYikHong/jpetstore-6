@@ -46,7 +46,7 @@ public class Account implements Serializable {
   private boolean listOption;
   private boolean bannerOption;
   private String bannerName;
-
+//added a comment
   public String getUsername() {
     return username;
   }
@@ -192,5 +192,9 @@ public class Account implements Serializable {
   public void setBannerName(String bannerName) {
     this.bannerName = bannerName;
   }
+  public String getFullName() {
+  return (firstName != null ? firstName : "") + " " + (lastName != null ? lastName : "");
+}
+
 
 }

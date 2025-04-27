@@ -15,9 +15,12 @@
  */
 package org.mybatis.jpetstore.domain;
 
+// Edited by Yu Tian for pull request
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Optional;
+
+// Edited by Yu Tian
 
 /**
  * The Class CartItem.
@@ -28,10 +31,11 @@ public class CartItem implements Serializable {
 
   private static final long serialVersionUID = 6620528781626504362L;
 
-  private Item item;
-  private int quantity;
-  private boolean inStock;
-  private BigDecimal total;
+  // edited by yutian again
+  public Item item;
+  public int quantity;
+  public boolean inStock;
+  public BigDecimal total;
 
   public boolean isInStock() {
     return inStock;
@@ -68,9 +72,27 @@ public class CartItem implements Serializable {
     calculateTotal();
   }
 
-  private void calculateTotal() {
+  // edited by yutian again
+  public void calculateTotal() {
     total = Optional.ofNullable(item).map(Item::getListPrice).map(v -> v.multiply(new BigDecimal(quantity)))
         .orElse(null);
   }
+
+  // Added by Yu Tian - Non-functional method for demonstration
+  public void printDebugInfo() {
+    System.out.println(
+        "Debug Info - Item: " + item + ", Quantity: " + quantity + ", In Stock: " + inStock + ", Total: " + total);
+  }
+
+  // Added by Yu Tian - Placeholder method
+  public void placeholderMethod() {
+    // This method currently does nothing.
+  }
+
+  // This method is added by Yu Tian
+
+  public void showContributorName() {
+    System.out.println("This file was contributed by Yu Tian.");
+}
 
 }
