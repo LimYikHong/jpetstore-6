@@ -110,10 +110,6 @@ public class Cart implements Serializable {
     CartItem cartItem = itemMap.get(itemId);
     cartItem.setQuantity(quantity);
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 11e41d143a4f86e1856011d4bea791c392bb358e
 
   /**
    * Gets the sub total.
