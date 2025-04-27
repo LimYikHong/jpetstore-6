@@ -12,7 +12,7 @@ JPetStore 6 is a full web application built on top of MyBatis 3, Spring 5 and St
 
 Essentials
 
-Trying to make changes
+Trying to make changes againn
 ----------
 
 * [See the docs](http://www.mybatis.org/jpetstore-6)
